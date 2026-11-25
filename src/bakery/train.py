@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def train_model():
-    data = pd.read_csv("output/dataset.csv")
+    data = pd.read_csv("output/bakery/dataset.csv")
     
     features = data.drop(columns=["label"])
     labels = data["label"]
@@ -17,4 +17,4 @@ def train_model():
 
     model.fit(features, labels)
 
-    joblib.dump(model, "output/model.pkl")
+    joblib.dump(model, "output/bakery/model.pkl")

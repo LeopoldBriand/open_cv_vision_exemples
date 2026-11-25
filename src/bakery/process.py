@@ -21,7 +21,7 @@ def get_gray_scale_and_histogram(image):
     plt.ylabel("Number of pixels")
     plt.xlim([0, 256])
     plt.grid()
-    plt.savefig("output/histogram.png")
+    plt.savefig("output/bakery/histogram.png")
     plt.close()
 
     return gray
@@ -41,7 +41,7 @@ def get_mask_from_grayscale(gray):
     mask = cv2.bitwise_not(mask)
     plt.imshow(cv2.cvtColor(mask, cv2.COLOR_BGR2RGB))
     plt.axis("off")
-    plt.savefig("output/binary_mask.png", bbox_inches="tight")
+    plt.savefig("output/bakery/binary_mask.png", bbox_inches="tight")
     plt.close()
     return mask
 
@@ -68,7 +68,7 @@ def get_contour_from_mask(image, mask):
 
     plt.imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
     plt.axis("off")
-    plt.savefig("output/contour_visualization.png", bbox_inches="tight")
+    plt.savefig("output/bakery/contour_visualization.png", bbox_inches="tight")
     plt.close()
 
     return bread_contour

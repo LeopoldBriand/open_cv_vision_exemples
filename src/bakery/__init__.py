@@ -27,7 +27,7 @@ def main() -> None:
         if image is None:
             raise ValueError("Error opening " + args.path + " image.")
         
-        model_path = "output/model.pkl"
+        model_path = "output/bakery/model.pkl"
         model = joblib.load(model_path)
          
         if model is None:

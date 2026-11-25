@@ -28,7 +28,7 @@ def extract_basic_features(contour):
 
 def build_dataset():
     img_features = []
-    for i in os.scandir("img/data"):
+    for i in os.scandir("img/bread"):
         if i.is_dir():
             label = i.name
             for j in os.scandir(i.path):
@@ -58,4 +58,4 @@ def save_to_csv(features):
     rows = np.array([list(d.values()) for d in data])
 
     # 3. Save to CSV (fmt='%s' handles mixed types; comments='' removes the default '#' prefix)
-    np.savetxt("output/dataset.csv", rows, delimiter=",", header=headers, comments="", fmt="%s")
+    np.savetxt("output/bakery/dataset.csv", rows, delimiter=",", header=headers, comments="", fmt="%s")
