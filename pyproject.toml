@@ -1,7 +1,7 @@
 [project]
-name = "bakery"
+name = "open_cv_vision_exemples"
 version = "0.1.0"
-description = "Add your description here"
+description = "Some projects to re-learn open cv"
 readme = "README.md"
 authors = [
     { name = "LeopoldBriand", email = "leopold.briand@laposte.net" }
@@ -17,6 +17,7 @@ dependencies = [
 
 [project.scripts]
 bakery = "bakery:main"
+components = "components:main"
 
 [build-system]
 requires = ["uv_build>=0.13.9,<0.14.0"]
